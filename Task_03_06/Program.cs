@@ -13,7 +13,10 @@
             {
                 double y = Math.Abs(x); 
                 Console.WriteLine($"{x,6:F2} | {y,8:F2}");
+
+              
+                }
             }
         }
     }
-}
+
