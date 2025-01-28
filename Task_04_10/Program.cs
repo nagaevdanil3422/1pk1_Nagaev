@@ -4,40 +4,40 @@
     {
         static void Main(string[] args)
         {
-            Random random = new Random();
-            int[] numbers = new int[10];
+            Random rnd = new Random();
+            int[] num = new int[10];
 
             
-            for (int i = 0; i < numbers.Length; i++)
+            for (int i = 0; i < num.Length; i++)
             {
-                numbers[i] = random.Next(-10, 11); 
+                num[i] = rnd.Next(-10, 11); 
             }
 
             Console.WriteLine("Исходный массив:");
-            PrintArray(numbers);
+            PrintArray(num);
 
            
-            ReverseArray(numbers, 0, numbers.Length / 2 - 1);
+            ReverseArray(num, 0, num.Length / 2 - 1);
             
-            ReverseArray(numbers, numbers.Length / 2, numbers.Length - 1);
+            ReverseArray(num, num.Length / 2, num.Length - 1);
 
             Console.WriteLine("Массив после реверса:");
-            PrintArray(numbers);
+            PrintArray(num);
         }
 
         
-        static void ReverseArray(int[] array, int startIndex, int endIndex)
+        static void ReverseArray(int[] array, int s, int e)
         {
-            while (startIndex < endIndex)
+            while (s < e)
             {
                
-                int temp = array[startIndex];
-                array[startIndex] = array[endIndex];
-                array[endIndex] = temp;
+                int temp = array[s];
+                array[s] = array[e];
+                array[e] = temp;
 
               
-                startIndex++;
-                endIndex--;
+                s++;
+                e--;
             }
         }
 
