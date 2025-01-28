@@ -12,41 +12,41 @@
             В полученном массиве найти наибольшее по модулю число. 
             */
 
-            Random random = new Random();
+            Random rnd = new Random();
             int size = 20; 
-            int[] numbers = new int[size];
-            HashSet<int> usedModules = new HashSet<int>();
+            int[] num = new int[size];
+            HashSet<int> to = new HashSet<int>();
 
             int index = 0;
 
             while (index < size)
             {
                 
-                int number = random.Next(-100, 101); 
+                int nume = rnd.Next(-100, 101); 
 
                 
-                if (usedModules.Add(Math.Abs(number)))
+                if (to.Add(Math.Abs(nume)))
                 {
-                    numbers[index] = number;
+                    num[index] = nume;
                     index++;
                 }
             }
 
             
             Console.WriteLine("Сгенерированный массив:");
-            foreach (var num in numbers)
+            foreach (int nume in num)
             {
                 Console.WriteLine(num);
             }
 
             
-            int i = numbers[0];
+            int i = num[0];
 
-            foreach (var num in numbers)
+            foreach (int nume in num)
             {
-                if (Math.Abs(num) > Math.Abs(i))
+                if (Math.Abs(nume) > Math.Abs(i))
                 {
-                    i = num;
+                    i = nume;
                 }
             }
 
