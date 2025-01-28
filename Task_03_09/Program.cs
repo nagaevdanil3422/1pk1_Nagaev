@@ -16,15 +16,15 @@ namespace Task_03_09
             float a = float.Parse(Console.ReadLine());
             Console.WriteLine("Введите полную сумму: ");
             double y = Convert.ToDouble(Console.ReadLine());
-            int years = 0;
+            int age = 0;
 
             while (x < y)
             {
                 x += x * (a / 100);
                 x = Math.Floor(x * 100) / 100;
-                years++;
+                age++;
             }
-            Console.WriteLine($"Вклад достигнет не менее {y} рублей через {years} лет.");
+            Console.WriteLine($"Вклад достигнет не менее {y} рублей через {age} лет.");
         }
     }
 }
