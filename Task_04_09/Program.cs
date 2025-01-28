@@ -4,23 +4,23 @@
     {
         static void Main(string[] args)
         {
-            int[] numbers = { 1, 2, 3, 2, 4, 5, 6, 1, 7, 8, 6, 9, 10, 10 };
-            int size = numbers.Length;
+            int[] num = { 1, 2, 3, 2, 4, 5, 6, 1, 7, 8, 6, 9, 10, 10 };
+            int s = num.Length;
 
 
-            int[] counts = new int[101];
+            int[] cy = new int[101];
 
 
-            for (int i = 0; i < size; i++)
+            for (int i = 0; i < s; i++)
             {
-                counts[numbers[i]]++;
+                cy[num[i]]++;
             }
 
 
             Console.WriteLine("Уникальные элементы:");
-            for (int i = 0; i < counts.Length; i++)
+            for (int i = 0; i < cy.Length; i++)
             {
-                if (counts[i] == 1)
+                if (cy[i] == 1)
                 {
                     Console.Write(i + " ");
                 }
