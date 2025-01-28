@@ -7,8 +7,8 @@
             Console.WriteLine("Enter texts: ");
             while (true)
             {
-                string user = Console.ReadLine();
-                if (user == "exit")
+                string? input = Console.ReadLine();
+                if (input == "exit")
                 {
                     
                     break;
