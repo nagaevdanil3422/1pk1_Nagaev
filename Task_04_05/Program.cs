@@ -13,58 +13,58 @@ namespace Task_04_05
                    */
 
 
-            Random rnd = new Random();
-            int[] tem = new int[30];
-            int summ = 0;
+            Random random = new Random();
+            int[] teme = new int[30];
+            int sum = 0;
 
-            for (int i = 0; i < tem.Length; i++)
+            for (int i = 0; i < teme.Length; i++)
             {
 
-                tem[i] = rnd.Next(0, 301);
+                teme[i] = random.Next(0, 301);
 
             }
 
             Console.WriteLine("Осадки за каждый день месяца: ");
 
-            for (int i = 0; i < tem.Length; i++)
+            for (int i = 0; i < teme.Length; i++)
             {
-                Console.WriteLine($"Day {i + 1}: {tem[i]}");
-                summ += tem[i];
+                Console.WriteLine($"День {i + 1}: {teme[i]}");
+                sum += teme[i];
             }
-            Console.WriteLine($"Общее количество осадков: " + summ);
+            Console.WriteLine($"Общее количество осадков: " + sum);
 
             for (int decade = 0; decade < 3; decade++)
             {
-                int start = decade * 10;
+                int st = decade * 10;
                 int totalPrecipitation = 0;
 
-                for (int day = start; day < start + 10; day++)
+                for (int day = st; day < st + 10; day++)
                 {
-                    totalPrecipitation += tem[day];
+                    totalPrecipitation += teme[day];
                 }
 
                 Console.WriteLine($"Общее количество осадков за {decade + 1} декаду: {totalPrecipitation} мм");
             }
 
-            int maxPrecipitation = 0;
-            int maxDay = -1;
+            int max = 0;
+            int max1 = -1;
 
-            for (int i = 0; i < tem.Length; i++)
+            for (int i = 0; i < teme.Length; i++)
             {
-                if (tem[i] > maxPrecipitation)
+                if (teme[i] > max)
                 {
-                    maxPrecipitation = tem[i];
-                    maxDay = i + 1;
+                    max = teme[i];
+                    max1 = i + 1;
                 }
             }
 
-            Console.WriteLine($"День с самыми сильными осадками: День {maxDay} ({maxPrecipitation} мм)");
+            Console.WriteLine($"День с самыми сильными осадками: День {max1} ({max} мм)");
 
-            for (int p = 0; p < tem.Length; p++)
+            for (int po = 0; po < teme.Length; po++)
             {
-                if (tem[p] == 0)
+                if (teme[po] == 0)
                 {
-                    Console.WriteLine($"Дни без осадков: {p + 1} ");
+                    Console.WriteLine($"Дни без осадков: {po + 1} ");
 
                 }
 
