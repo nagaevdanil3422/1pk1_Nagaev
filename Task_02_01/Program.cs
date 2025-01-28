@@ -11,18 +11,18 @@
             double b = Convert.ToDouble(Console.ReadLine());
 
             //вычисление и вывод результата
-            double summAB = a + b;
-            Console.WriteLine("сумма чисел: " + summAB);
+            double sum = a + b;
+            Console.WriteLine("сумма чисел: " + sum);
 
-            double multipleAB = a * b;
-            Console.WriteLine("произведение чисел: " + multipleAB);
-            double diffAB = a - b;
-            Console.WriteLine("разность чисел: " + diffAB);
-            double divAB;
+            double pli = a * b;
+            Console.WriteLine("произведение чисел: " + pli);
+            double ro = a - b;
+            Console.WriteLine("разность чисел: " + ro);
+            double tt;
             if (b != 0)
             {
-                divAB = a / b;
-                Console.WriteLine("деление a на b: " + divAB);
+                tt = a / b;
+                Console.WriteLine("деление a на b: " + tt);
             }
             else
             {
