@@ -24,25 +24,25 @@
             }
             for (int i = 0; i < user.GetLength(0); i++)
             {
-               for(int j = 0;j < user.GetLength(1); j++)
-               {
+                for (int j = 0; j < user.GetLength(1); j++)
+                {
                     if (i == j)
                     {
                         Console.Write(user[i, j] + "  ");
                     }
                     else if (i != j)
                     {
-                        
+
                     }
-               }
 
-                Console.WriteLine();
+                    Console.WriteLine();
+                }
+
+
+
+
+
             }
-
-
-
-
-
-        }       
+        }
     }
 }
