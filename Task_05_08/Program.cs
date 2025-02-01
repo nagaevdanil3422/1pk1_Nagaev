@@ -16,7 +16,7 @@ namespace Task_05_08
             Random rand = new Random();
             int[,] masiv = new int[10, 10];
             int[,] masiv2 = new int[10, 10];
-            int[,] us = new int[10, 10];
+            int[,] rusult = new int[10, 10];
             for (int i = 0; i < masiv.GetLength(0); i++)
             {
                 for (int j = 0; j < masiv.GetLength(1); j++)
@@ -24,7 +24,7 @@ namespace Task_05_08
                     masiv[i, j] = rand.Next(1, 10);
                     masiv2[i, j] = rand.Next(1, 10);
                     Console.Write(masiv[i, j] + " ");
-                    
+
                 }
                 Console.WriteLine();
             }
@@ -33,18 +33,29 @@ namespace Task_05_08
             for (int i = 0; i < masiv.GetLength(0); i++)
             {
                 for (int j = 0; j < masiv.GetLength(1); j++)
-                {                    
+                {
                     Console.Write(masiv2[i, j] + " ");
                 }
                 Console.WriteLine();
             }
-
-
+            Console.WriteLine();
+            for (int i = 0; i < masiv.GetLength(0); i++)
+            {
+                for (int j = 0; j < masiv.GetLength(1);  j++)
+                {
+                    rusult[i, j] = masiv[i, j] * masiv2[i, j];
+                    Console.Write(rusult[i,j] + "\t");
+                }
+                Console.WriteLine();
+            }
             
+
+
         }
-        }
+    }
+}
         
 
         
-    }
+    
 
