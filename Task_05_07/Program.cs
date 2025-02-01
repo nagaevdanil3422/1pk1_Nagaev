@@ -14,7 +14,7 @@ namespace Task_05_07
 
             int n = int.Parse(Console.ReadLine());
             int min = 100;
-            
+
             int[,] user = new int[n, n];
 
             for (int i = 0; i < user.GetLength(0); i++)
@@ -60,19 +60,20 @@ namespace Task_05_07
 
 
             //5 максимальных элементов
-            bool[,] maxValues = new bool[n,n];
+            bool[,] maxValues = new bool[n, n];
 
-            int tempMax = 100;
-            int iMax = 0;
-            int jMax = 0;
+
 
             for (int d = 0; d < 5; d++)
             {
+                int tempMax = 0;
+                int iMax = 0;
+                int jMax = 0;
                 for (int i = 0; i < user.GetLength(0); i++)
                 {
                     for (int j = 0; j < user.GetLength(1); j++)
                     {
-                        if (user[i, j] > tempMax && maxValues[i, j]==false)
+                        if (user[i, j] > tempMax && maxValues[i, j] == false)
 
                         {
                             tempMax = user[i, j];
@@ -82,9 +83,29 @@ namespace Task_05_07
                     }
                 }
                 maxValues[iMax, jMax] = true;
-                Console.WriteLine("индексы максимального значения" + iMax +" " +jMax);
+                Console.WriteLine("индексы максимального значения: " + iMax + " " + jMax);
             }
+            Console.WriteLine();
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    if (maxValues[i, j] == true)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write(user[i, j] + "\t");
+                        Console.ResetColor();
+                    }
+                    else
+                    {
+                        Console.Write(user[i, j] + "\t");
+                    }
 
+                }
+                Console.WriteLine();
+
+            }
+        }
 
 
 
@@ -139,4 +160,3 @@ namespace Task_05_07
 
                 }
     }
-}

@@ -23,29 +23,28 @@ namespace Task_05_08
                 {
                     masiv[i, j] = rand.Next(1, 10);
                     masiv2[i, j] = rand.Next(1, 10);
-
-
-                }
-            }
-            for (int i = 0; i <= masiv.GetLength(0); i++)
-            {
-                for (int j = 0; j < masiv.GetLength(1); j++)
-                {
-                    masiv[i, j] *= masiv2[i, j];
-
-                }
-            }
-            for (int i = 0; i < masiv.GetLength(0); i++)
-            {
-                for (int j = 0; j < masiv.GetLength(1); j++)
-                {
-                    Console.Write(masiv[i, j] + "\t");
+                    Console.Write(masiv[i, j] + " ");
+                    
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine();
+
+            for (int i = 0; i < masiv.GetLength(0); i++)
+            {
+                for (int j = 0; j < masiv.GetLength(1); j++)
+                {                    
+                    Console.Write(masiv2[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+
+
+            
+        }
         }
         
 
         
     }
-}
+
