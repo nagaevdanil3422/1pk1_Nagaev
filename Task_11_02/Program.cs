@@ -10,7 +10,7 @@
             int b = 10;
 
             Console.WriteLine($"До вызова метода: a = {a}, b = {b}");
-            SwapByValue(a, b);
+            SwapByValue(ref a, ref b);
             Console.WriteLine($"После вызова метода: a = {a}, b = {b}");
         }
         /// <summary>
@@ -18,7 +18,7 @@
         /// </summary>
         /// <param name="x">значение а</param>
         /// <param name="y">значение b</param>
-        static void SwapByValue(int x, int y)
+        static void SwapByValue(ref int x, ref int y)
         {
             int temp = x;
             x = y;
