@@ -4,9 +4,25 @@
     */
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello, World!");
+            int a = 5;
+            int b = 10;
+
+            Console.WriteLine($"До вызова метода: a = {a}, b = {b}");
+            SwapByValue(a, b);
+            Console.WriteLine($"После вызова метода: a = {a}, b = {b}");
+        }
+        /// <summary>
+        /// Метод который меняет значения
+        /// </summary>
+        /// <param name="x">значение а</param>
+        /// <param name="y">значение b</param>
+        static void SwapByValue(int x, int y)
+        {
+            int temp = x;
+            x = y;
+            y = temp;
         }
     }
 }

@@ -14,7 +14,11 @@
             SwapByValue(a, b);
             Console.WriteLine($"После вызова метода: a = {a}, b = {b}");
         }
-
+        /// <summary>
+        /// Метод который меняет значения 
+        /// </summary>
+        /// <param name="x">значение а</param>
+        /// <param name="y">значение b</param>
         static void SwapByValue(int x, int y)
         {
             int temp = x;
