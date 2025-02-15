@@ -11,11 +11,11 @@
             int b = 10;
 
             Console.WriteLine($"До вызова метода: a = {a}, b = {b}");
-            SwapByValue(ref a, ref b);
+            SwapByValue(a, b);
             Console.WriteLine($"После вызова метода: a = {a}, b = {b}");
         }
 
-        static void SwapByValue(ref int x, ref int y)
+        static void SwapByValue(int x, int y)
         {
             int temp = x;
             x = y;
