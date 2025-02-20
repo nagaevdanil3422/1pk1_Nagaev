@@ -8,67 +8,42 @@ namespace ClassesDemo.Publications
 {
 #pragma warning disable
 
-    internal class Book
+    internal class Journal
     {
-        public string title; //поле класса - хранит название книги
-        public string autor; //поле класса - хранит автора книги
-        bool isReading = false; //поле класса - хранит статус книги (выдана ли она читателю)
-
-        //метод класса - печатает в консоль информацию о книге
+        public string title; 
+        public string data;
+        public string naprav;
+        public int str;
+        public int manny;        
+        
         public void GetInfo()
         {
-            Console.WriteLine($"{autor} : {title}");
+            Console.WriteLine($"Название журнала: '{title}'");
+            Console.WriteLine($"Дата издания: {data}");
+            Console.WriteLine($"Предметно-тематическая направленность журнала: '{naprav}'");
+            Console.WriteLine($"Количество страниц: {str}");
+            Console.WriteLine($"Цена: {manny}");
         }
-        //метод класса - выдает книгу читателю и ставит отметку о выдаче
-        public void GetBoot()
+        public void Buy()
         {
-            if (isReading)
-                Console.WriteLine($"книга {title} в данный момент выдана другому читателю");
-            else
+            Console.WriteLine($"Введите 'buy' если хотите купить журнал\n Цена журнала: {manny} ");
+            string user = Console.ReadLine();
+            if (user == "buy")
             {
-                isReading = true;
-                Console.WriteLine("книга выдана на неделю");
-            }
-        }
-
-    }
-    public class Book1
-    {
-        public string Title { get; private set; }
-        public bool IsAvailable { get; private set; }
-
-        public Book1(string title)
-        {
-            Title = title;
-            IsAvailable = true; 
-        }
-
-        public void Borrow()
-        {
-            if (IsAvailable)
-            {
-                IsAvailable = false;
-                Console.WriteLine($"Книга '{Title}' была взята.");
+                Console.WriteLine("Куплена");
             }
             else
             {
-                Console.WriteLine($"Книга '{Title}' недоступна.");
+                Console.WriteLine("Не куплена");
             }
         }
-
-        public void ReturnBook()
+        public void Soder()
         {
-            if (!IsAvailable)
-            {
-                IsAvailable = true;
-                Console.WriteLine($"Книга '{Title}' была возвращена и теперь доступна.");
-            }
-            else
-            {
-                Console.WriteLine($"Книга '{Title}' уже доступна.");
-            }
+            Console.WriteLine("Содержание журнала");
+            Console.WriteLine("1. Роль скандинавского язычества в формировании культуры викингов\n2. Скандинавские божества, космогонические мифы и создание мира \n3. Обряды скандинавского культа\n4. Мировоззрение скандинавского язычества");
         }
     }
 }
+
 
 

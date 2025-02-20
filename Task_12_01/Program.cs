@@ -6,31 +6,52 @@ namespace ClassesDemo
     {
         static void Main(string[] args)
         {
-            Book book1 = new Book();
-            var book2 = new Book();
-            var book3 = new Book() { title = "Автостопом по галактике", autor = "Дуглас Адамс" };
-            Book book4 = new Book() { title = "Хоббит", autor = "Джон Толкин" };
+            Journal tom = new Journal();
+            Console.WriteLine("Журнал о Скандинавском язычестве");
+
+            string nameJ = tom.title;
+            string dataJ = tom.data;
+            string napravJ = tom.naprav;
+            int strJ = tom.str;
+            int mannyJ = tom.manny;
+
+            tom.title = "Скандинавское язычество";
+            tom.data = "12.07.2007г.";
+            tom.naprav = "Культура";
+            tom.str = 345;
+            tom.manny = 1299;
+
+            while (true)
+            {
+                Console.Write("Что хотите узнать о журнале?\n1. Данные о журнале\n2. Просмотр содержания журнала\n3. Покупка журнала\n4. Выйти из программы\n Введите цифру: ");
+                string input = Console.ReadLine();
+                Console.WriteLine();
+
+                if (input == "1")
+                {
+                    tom.GetInfo();
+                }
+                else if (input == "2")
+                {
+                    tom.Soder();
+                }
+                else if (input == "3")
+                {
+                    tom.Buy();
+                }
+                else if (input == "4")
+                {
+                    Console.WriteLine("Спасибо что были с нами!");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Ошибка...");
+                }
+                Console.WriteLine();
+            }
 
 
-            book1.autor = "Рей Бредберри";
-            book1.title = "Марсианские хроники";
-            book1.GetInfo();    //Рей Бредберри : Марсианские хроники
-
-            book2.autor = "Джона Роулинг";
-            book2.title = "Гарри Поттер и философский камень";
-            book2.GetInfo();    //Джона Роулинг : Гарри Поттер и философский камень
-
-            //выдача книги
-            book2.GetBoot(); // книга выдана на неделю
-
-            //попытка выдать уже занятую книгу
-            book2.GetBoot(); // книга Гарри Поттер и философский камень в данный момент выдана другому читателю
-
-             
-                Book1 book = new Book1("Война и мир");
-
-                book.Borrow();
-                book.ReturnBook();            
         }
     }
 }
