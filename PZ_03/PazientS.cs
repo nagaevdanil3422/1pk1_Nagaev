@@ -15,7 +15,7 @@ namespace PZ_03
         public DateTime? DischargeDate { get; set; } // Дата выписки ( На начало пустая )
         public string Complaints { get; set; } // Жалобы
         public string Diagnosis { get; set; } // Диагноз
-        public string Treatment { get; set; } // Лечение
+        public string Treatment { get; set; } // Назначеное лечение
 
         public Patient(PatientStatus status, DateTime admissionDate, string complaints, string diagnosis, string treatment)
         {
