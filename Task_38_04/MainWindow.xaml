@@ -1,0 +1,53 @@
+﻿<Window x:Class="Task_38_04.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task_38_04"
+        mc:Ignorable="d"
+        Title="Students ОКЕИ" SizeToContent="WidthAndHeight">
+    <UniformGrid Columns="2" Margin="10">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+            <Label Content="Регистрация" HorizontalAlignment="Center" FontSize="16" FontFamily="Arial Black"/>
+            <Label Content="Введите фамилию"/>
+            <TextBox x:Name="secondNameTextBox" 
+                 Margin="5,5,5,5"/>
+            <Label Content="Введите имя"/>
+            <TextBox x:Name="firstNameTextBox" 
+                 Margin="5,5,5,5"/>
+            <Label Content="Введите отчество (если есть)"/>
+            <TextBox x:Name="middleNameTextBox" 
+                 Margin="5,5,5,5"/>
+            <Label Content="Введите группу"/>
+            <TextBox x:Name="groupTextBox" 
+                 Margin="5,5,5,5"/>
+            <Label Content="Выберите ваш пол"/>
+            <ComboBox Width="120"
+                  Margin="5,10,5,10"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Center">
+                <ComboBoxItem Content="Мужской"/>
+                <ComboBoxItem Content="Женский"/>
+            </ComboBox>
+            <Label Content="Выберите дату рождения"/>
+            <DatePicker Name="datePicker1" 
+                        IsDropDownOpen="True" 
+                        SelectedDateFormat="Short" />
+
+
+            <Button Content="Сохранить"
+                Name="saveButton"
+                Margin="0,20,0,10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" Padding="5,1,5,1"/>
+
+        </StackPanel>
+
+
+        <ListBox x:Name="dataListBox"
+                     Background="Azure">
+
+        </ListBox>
+    </UniformGrid>
+
+</Window>
