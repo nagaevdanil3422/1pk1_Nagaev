@@ -23,4 +23,3 @@ namespace Task_38_04
             }
         }
     }
-}
