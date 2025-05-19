@@ -22,7 +22,9 @@
             <TextBox x:Name="groupTextBox" 
                  Margin="5,5,5,5"/>
             <Label Content="Выберите ваш пол"/>
-            <ComboBox Width="120"
+            <ComboBox 
+                  Name ="polComboBox"
+                  Width="120"
                   Margin="5,10,5,10"
                   HorizontalAlignment="Left"
                   VerticalAlignment="Center">
@@ -30,7 +32,7 @@
                 <ComboBoxItem Content="Женский"/>
             </ComboBox>
             <Label Content="Выберите дату рождения"/>
-            <DatePicker Name="datePicker1" 
+            <DatePicker Name="dateBirthday" 
                         IsDropDownOpen="True" 
                         SelectedDateFormat="Short" />
 

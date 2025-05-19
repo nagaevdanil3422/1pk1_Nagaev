@@ -10,12 +10,15 @@ using System.Threading.Tasks;
 
 namespace Task_38_04
 {
-    internal class BazaData
+    public class BazaData
     {
-        List<RegistrationStudent> students = new List<RegistrationStudent>();
+        private List<RegistrationStudent> students = new();
+        
+        public List<RegistrationStudent> Students => students;
 
         private const string saveFileName = "Students.json";
 
+        
 
         public void SaveStudents()
         {
