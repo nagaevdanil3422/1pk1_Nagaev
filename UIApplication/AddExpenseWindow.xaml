@@ -1,0 +1,54 @@
+﻿<Window x:Class="UIApplication.AddExpenseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UIApplication"
+        mc:Ignorable="d"
+        Title="Добавить" Height="200" Width="250">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Заголовок" Grid.Row="0"/>
+        <TextBox x:Name="TitleTextBox" Grid.Column="1" Margin="5,2,5,5"/>
+        <TextBox Name="ContentTextBox"
+                 Margin="0,5,0,5"
+                 Grid.Row="4"
+                 TextWrapping="Wrap"
+                 AcceptsReturn="True"
+                 Grid.Column="0"
+                 />
+        <Label Content="Укажите категорию" Grid.Row="1"/>
+        <ComboBox Name="CategoryComboBox" Grid.Row="1" Grid.Column="1" Margin="5, 3, 5, 5">
+            <ComboBoxItem Content="покупка продуктов питания"/>
+            <ComboBoxItem Content="оплата жилья"/>
+            <ComboBoxItem Content="оплата транспорта для проезда на работу и обратно"/>
+            <ComboBoxItem Content="покупка одежды"/>
+        </ComboBox>
+        <Label Content="Укажите сумму" Grid.Row="2"/>
+        <TextBox x:Name="AmountTextBox" Grid.Row="2" Grid.Column="1" Margin="5"/>
+        <Label Content="Выберите дату" Grid.Row="3" Grid.Column="0"/>
+        <DatePicker Name="DateExpenseDatePicker" IsDropDownOpen="True" SelectedDateFormat="Short" Grid.Column="1" Grid.Row="3"/>
+        <Button x:Name="AddExpenseButton"
+                Content="Добавить"
+                Click="AddExpenseButton_Click"
+                Grid.Column="1"
+                Grid.Row="4" VerticalAlignment="Bottom"
+                >
+            
+        </Button>
+
+
+
+    </Grid>
+</Window>
